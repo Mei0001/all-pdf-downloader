@@ -1,0 +1,29 @@
+{
+  "appName": {
+    "message": "PDF 标签页批量下载器",
+    "description": "Extension name shown in Chrome Web Store and toolbar tooltip."
+  },
+  "appDescription": {
+    "message": "自动检测所有已打开标签页中 URL 以 .pdf 结尾的页面，一键批量下载。",
+    "description": "Extension short description for Chrome Web Store listing."
+  },
+  "loading": { "message": "加载中..." },
+  "countDetected": {
+    "message": "检测到 $COUNT$ 个 PDF 标签页",
+    "placeholders": { "count": { "content": "$1", "example": "5" } }
+  },
+  "closeAfter": { "message": "下载完成后关闭标签页" },
+  "downloadAll": { "message": "全部下载" },
+  "noPdfsFound": { "message": "未检测到 PDF 标签页" },
+  "downloading": {
+    "message": "下载中... $DONE$/$TOTAL$",
+    "placeholders": {
+      "done":  { "content": "$1", "example": "2" },
+      "total": { "content": "$2", "example": "5" }
+    }
+  },
+  "complete": {
+    "message": "完成（$COUNT$ 个文件）",
+    "placeholders": { "count": { "content": "$1", "example": "5" } }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "appName": {
+    "message": "一括PDFダウンローダー",
+    "description": "Extension name shown in Chrome Web Store and toolbar tooltip."
+  },
+  "appDescription": {
+    "message": "開いている全タブのうち URL が .pdf のものを検出し、一括でダウンロードします。",
+    "description": "Extension short description for Chrome Web Store listing."
+  },
+  "loading": { "message": "読み込み中..." },
+  "countDetected": {
+    "message": "$COUNT$ 件の PDF タブを検出",
+    "placeholders": { "count": { "content": "$1", "example": "5" } }
+  },
+  "closeAfter": { "message": "ダウンロード後にタブを閉じる" },
+  "downloadAll": { "message": "全部ダウンロード" },
+  "noPdfsFound": { "message": "PDF タブが見つかりません" },
+  "downloading": {
+    "message": "ダウンロード中... $DONE$/$TOTAL$",
+    "placeholders": {
+      "done":  { "content": "$1", "example": "2" },
+      "total": { "content": "$2", "example": "5" }
+    }
+  },
+  "complete": {
+    "message": "完了 ($COUNT$ 件)",
+    "placeholders": { "count": { "content": "$1", "example": "5" } }
+  }
+}

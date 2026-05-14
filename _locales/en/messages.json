@@ -1,0 +1,29 @@
+{
+  "appName": {
+    "message": "Bulk PDF Downloader",
+    "description": "Extension name shown in Chrome Web Store and toolbar tooltip."
+  },
+  "appDescription": {
+    "message": "Detects all open tabs whose URL ends with .pdf and downloads them in one click.",
+    "description": "Extension short description for Chrome Web Store listing."
+  },
+  "loading": { "message": "Loading..." },
+  "countDetected": {
+    "message": "$COUNT$ PDF tabs detected",
+    "placeholders": { "count": { "content": "$1", "example": "5" } }
+  },
+  "closeAfter": { "message": "Close tabs after download" },
+  "downloadAll": { "message": "Download all" },
+  "noPdfsFound": { "message": "No PDF tabs found" },
+  "downloading": {
+    "message": "Downloading... $DONE$/$TOTAL$",
+    "placeholders": {
+      "done":  { "content": "$1", "example": "2" },
+      "total": { "content": "$2", "example": "5" }
+    }
+  },
+  "complete": {
+    "message": "Done ($COUNT$ files)",
+    "placeholders": { "count": { "content": "$1", "example": "5" } }
+  }
+}

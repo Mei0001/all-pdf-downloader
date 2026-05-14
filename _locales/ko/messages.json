@@ -1,0 +1,29 @@
+{
+  "appName": {
+    "message": "PDF 일괄 다운로더",
+    "description": "Extension name shown in Chrome Web Store and toolbar tooltip."
+  },
+  "appDescription": {
+    "message": "열려 있는 모든 탭 중 URL이 .pdf로 끝나는 탭을 감지하여 일괄 다운로드합니다.",
+    "description": "Extension short description for Chrome Web Store listing."
+  },
+  "loading": { "message": "로딩 중..." },
+  "countDetected": {
+    "message": "PDF 탭 $COUNT$개 감지됨",
+    "placeholders": { "count": { "content": "$1", "example": "5" } }
+  },
+  "closeAfter": { "message": "다운로드 후 탭 닫기" },
+  "downloadAll": { "message": "모두 다운로드" },
+  "noPdfsFound": { "message": "PDF 탭을 찾을 수 없습니다" },
+  "downloading": {
+    "message": "다운로드 중... $DONE$/$TOTAL$",
+    "placeholders": {
+      "done":  { "content": "$1", "example": "2" },
+      "total": { "content": "$2", "example": "5" }
+    }
+  },
+  "complete": {
+    "message": "완료 ($COUNT$개)",
+    "placeholders": { "count": { "content": "$1", "example": "5" } }
+  }
+}

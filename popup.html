@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <title data-i18n="appName">Bulk PDF Downloader</title>
+</head>
+<body>
+  <h1 data-i18n="appName">Bulk PDF Downloader</h1>
+  <p id="count" data-i18n="loading">Loading...</p>
+  <ul id="list"></ul>
+  <label class="opt">
+    <input type="checkbox" id="close-after">
+    <span data-i18n="closeAfter">Close tabs after download</span>
+  </label>
+  <button id="download" data-i18n="downloadAll" disabled>Download all</button>
+  <p id="status"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
