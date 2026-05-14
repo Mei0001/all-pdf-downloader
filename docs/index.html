@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Privacy Policy — Bulk PDF Downloader</title>
+<style>
+  :root {
+    --fg: #1a1a1a;
+    --muted: #555;
+    --accent: #1a73e8;
+    --border: #e5e5e5;
+    --bg: #ffffff;
+    --code-bg: #f5f5f7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                 "Hiragino Sans", "Noto Sans CJK JP", sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  h1 {
+    margin: 0 0 8px 0;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    margin-top: 36px;
+    font-size: 20px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .badge {
+    display: inline-block;
+    background: #e8f0fe;
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 2px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 6px;
+  }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "SF Mono", Consolas, Monaco, monospace;
+    font-size: 0.9em;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--code-bg); font-weight: 600; }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .summary-card {
+    background: #f0f7ff;
+    border: 1px solid #cfe1fb;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .summary-card strong { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Privacy Policy</h1>
+  <p class="meta">
+    <span class="badge">Bulk PDF Downloader</span>
+    Last updated: May 14, 2026
+  </p>
+</header>
+
+<div class="summary-card">
+  <strong>TL;DR:</strong> This extension collects no personal data, sends nothing to any server,
+  and runs entirely inside your browser. It only reads the URLs and titles of your open tabs
+  to find PDFs to download, and saves a single on/off toggle locally.
+</div>
+
+<h2>1. Who we are</h2>
+<p>
+  "Bulk PDF Downloader" (the "Extension") is an open-source Chrome browser extension that detects
+  open tabs whose URLs end with <code>.pdf</code> and lets the user download them in bulk with a
+  single click. The Extension is developed and maintained by the project owner via the public
+  repository at
+  <a href="https://github.com/Mei0001/all-pdf-downloader" target="_blank" rel="noopener">
+    github.com/Mei0001/all-pdf-downloader
+  </a>.
+</p>
+
+<h2>2. What information we collect</h2>
+<p>
+  <strong>None.</strong> The Extension does not collect, store remotely, or transmit any of the
+  following:
+</p>
+<ul>
+  <li>Personally identifiable information (name, email, phone, address, age, ID numbers)</li>
+  <li>Health information</li>
+  <li>Financial or payment information</li>
+  <li>Authentication information (passwords, cookies, OAuth tokens, security questions)</li>
+  <li>Personal communications (emails, chat messages)</li>
+  <li>Location information (region, IP address, GPS coordinates)</li>
+  <li>Web browsing history</li>
+  <li>User activity (clicks, scrolls, mouse position, keystrokes)</li>
+  <li>Website content (text, images, audio, video, hyperlinks)</li>
+</ul>
+
+<h2>3. What the Extension does access</h2>
+<p>
+  When the user opens the Extension's popup, the Extension calls
+  <code>chrome.tabs.query()</code> to retrieve the URL and title of currently open tabs.
+  This information is used <em>in-memory only</em> for the following purposes:
+</p>
+<ul>
+  <li>To detect tabs whose URL pathname ends with <code>.pdf</code></li>
+  <li>To display the list of detected PDF tabs in the popup so the user can confirm</li>
+  <li>To use the tab title as the suggested filename when downloading</li>
+</ul>
+<p>
+  This data is <strong>not persisted</strong> to local storage, <strong>not transmitted</strong>
+  to any external server, and is discarded from memory when the popup is closed.
+</p>
+
+<h2>4. Permissions and why we need them</h2>
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>tabs</code></td>
+      <td>
+        Read URLs and titles of open tabs to detect PDFs and use the title as the saved
+        filename. Tab contents (DOM, cookies, form inputs) are <strong>not</strong> accessed.
+      </td>
+    </tr>
+    <tr>
+      <td><code>downloads</code></td>
+      <td>
+        Save detected PDF files to the user's default Downloads folder. Triggered only by an
+        explicit click of the "Download all" button.
+      </td>
+    </tr>
+    <tr>
+      <td><code>storage</code></td>
+      <td>
+        Persist a single boolean preference (<code>closeAfterDownload</code>) using
+        <code>chrome.storage.local</code>. Local only — not synced to Google account, not
+        transmitted anywhere.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>5. Data we store locally</h2>
+<p>
+  The only data stored on disk by the Extension is the following preference, kept in
+  <code>chrome.storage.local</code>:
+</p>
+<ul>
+  <li><code>closeAfterDownload</code>: a boolean indicating whether tabs should be closed
+    automatically after their PDF finishes downloading.</li>
+</ul>
+<p>
+  This preference is stored on the user's local machine only. It is not synchronized across
+  devices and is not transmitted off the device. Uninstalling the Extension removes this
+  preference along with the Extension itself.
+</p>
+
+<h2>6. Third-party services</h2>
+<p>
+  The Extension does <strong>not</strong> integrate with any third-party services, analytics
+  platforms, advertising networks, error reporting services, or external APIs. There is no
+  background communication of any kind.
+</p>
+
+<h2>7. Remote code</h2>
+<p>
+  The Extension does <strong>not</strong> load, execute, or evaluate remote code. All JavaScript
+  is bundled inside the extension package. No <code>eval()</code>, no remote
+  <code>&lt;script&gt;</code> tags, no dynamic module loading from external sources.
+</p>
+
+<h2>8. Children's privacy</h2>
+<p>
+  The Extension does not knowingly collect data from anyone, including children under 13. There
+  are no accounts, no sign-up, and no profiles to populate.
+</p>
+
+<h2>9. Changes to this policy</h2>
+<p>
+  If this policy is updated, the "Last updated" date at the top of this page will reflect the
+  change. Material changes will be announced via the GitHub repository's release notes.
+</p>
+
+<h2>10. Contact</h2>
+<p>
+  Questions or concerns about this policy can be raised by opening an issue at:
+  <br>
+  <a href="https://github.com/Mei0001/all-pdf-downloader/issues" target="_blank" rel="noopener">
+    https://github.com/Mei0001/all-pdf-downloader/issues
+  </a>
+</p>
+
+<footer>
+  This privacy policy is published at
+  <code>https://mei0001.github.io/all-pdf-downloader/</code> and the source HTML is part of the
+  Extension's open-source repository on GitHub.
+</footer>
+</body>
+</html>
